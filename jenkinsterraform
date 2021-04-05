@@ -1,0 +1,21 @@
+FROM jenkins/jenkins:lts
+
+# Switch to root
+USER root
+
+ENV DOCKER_VERSION      docker-18.06.3-ce
+ARG DOCKER_GID=966 # put the correct docker gid(VERY IMPORTNAT)
+
+# upgrade and install terraform
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN wget --quiet https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip \
+  && unzip terraform_0.11.3_linux_amd64.zip \
+  && mv terraform /usr/bin \
+  && rm terraform_0.11.3_linux_amd64.zip
+
+# Switch back to jenkins user
+USER jenkins
