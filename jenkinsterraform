@@ -3,9 +3,6 @@ FROM jenkins/jenkins:lts
 # Switch to root
 USER root
 
-ENV DOCKER_VERSION      docker-18.06.3-ce
-ARG DOCKER_GID=966 # put the correct docker gid(VERY IMPORTNAT)
-
 # upgrade and install terraform
 RUN apt-get update && apt-get install -y \
     wget \
