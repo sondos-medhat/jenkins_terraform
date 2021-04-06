@@ -28,3 +28,7 @@ variable az2 {
 variable vpccidr { 
     type=string
 }
+
+variable awsinstance { 
+    type=string
+}

@@ -32,3 +32,7 @@ variable vpccidr {
 variable awsprovider { 
     type=string
 }
+
+variable awsinstance { 
+    type=string
+}

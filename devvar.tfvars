@@ -8,3 +8,4 @@ az2="us-east-1b"
 vpccidr= "10.0.0.0/16"
 
 awsprovider="us-east-1"
+awsinstance="ami-042e8287309f5df03"

@@ -1,5 +1,5 @@
 resource "aws_instance" "bastion" {
-  ami = "ami-042e8287309f5df03"
+  ami = var.awsinstance
   instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.allowssh.id]
     subnet_id = aws_subnet.public1.id
