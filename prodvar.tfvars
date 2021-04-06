@@ -7,4 +7,4 @@ az1="us-east-2a"
 az2="us-east-2b"
 vpccidr= "10.0.0.0/16"
 
-awsprovider="us-east-1"
+awsprovider="us-east-2"
