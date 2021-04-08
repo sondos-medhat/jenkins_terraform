@@ -1,8 +1,8 @@
 resource "aws_subnet" "public1" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = var.subnetpublic1cidr
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = var.subnetpublic1cidr
   map_public_ip_on_launch = true
-  availability_zone = var.az1
+  availability_zone       = var.az1
 
   tags = {
     Name = "public1"
@@ -10,10 +10,10 @@ resource "aws_subnet" "public1" {
 }
 
 resource "aws_subnet" "public2" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = var.subnetpublic2cidr
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = var.subnetpublic2cidr
   map_public_ip_on_launch = true
-  availability_zone =var.az2
+  availability_zone       = var.az2
 
 
   tags = {
@@ -22,10 +22,11 @@ resource "aws_subnet" "public2" {
 }
 
 resource "aws_subnet" "private1" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = var.subnetprivate1cidr
-    availability_zone = var.az1
-
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = var.subnetprivate1cidr
+  availability_zone = var.az1
+# d msh sa7 bs 3lshan m3ndnash nat
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "private1"
@@ -33,10 +34,11 @@ resource "aws_subnet" "private1" {
 }
 
 resource "aws_subnet" "private2" {
-  vpc_id     = aws_vpc.main.id
-  cidr_block = var.subnetprivate2cidr
-    availability_zone = var.az2
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = var.subnetprivate2cidr
+  availability_zone = var.az2
 
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "private2"

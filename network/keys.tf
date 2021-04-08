@@ -8,8 +8,8 @@ resource "aws_key_pair" "sshpublickey1" {
 }
 
 resource "local_file" "sshprivatekey1" {
-    content  = tls_private_key.sshkey1.private_key_pem
-    filename = "private_key1.pem"
+  content  = tls_private_key.sshkey1.private_key_pem
+  filename = "private_key1.pem"
 }
 
 
@@ -23,6 +23,6 @@ resource "aws_key_pair" "sshpublickey2" {
 }
 
 resource "local_file" "sshprivatekey2" {
-    content  = tls_private_key.sshkey2.private_key_pem
-    filename = "private_key2.pem"
+  content  = tls_private_key.sshkey2.private_key_pem
+  filename = "private_key2.pem"
 }
