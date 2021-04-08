@@ -1,0 +1,17 @@
+---
+- hosts: all
+  remote_user: ubuntu
+  become: yes
+  tasks:
+  - name: update apt
+    apt:
+      update_cache: yes
+  - name: create home dir
+    file:
+      name: jenkins_home
+      state: directory
+      mode: 0777
+  - name: install openjdk
+    apt:
+      name: openjdk-8-jdk
+      state: present
