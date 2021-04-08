@@ -37,8 +37,8 @@ resource "aws_security_group" "allowsshand3000" {
   }
 
    egress {
-    from_port   = 3000
-    to_port     = 3000
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -65,8 +65,8 @@ resource "aws_security_group" "rdssecuritygroup" {
   }
 
   egress {
-    from_port   = 3306
-    to_port     = 3306
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -90,8 +90,8 @@ resource "aws_security_group" "redisecuritygroup" {
   }
 
   egress {
-    from_port   = 6379
-    to_port     = 6379
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
