@@ -2,7 +2,6 @@
 - hosts: all
   remote_user: ubuntu
   become: yes
-  become_method: sudo
   vars:
     ansible_python_interpreter: /usr/lib/python2.7
   tasks:
