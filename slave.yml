@@ -5,7 +5,7 @@
   vars:
     ansible_python_interpreter: /usr/lib/python2.7
   tasks:
-    - debug: var=ansible_host
+  - debug: var=ansible_host
   - name: update apt
     apt:
       update_cache: yes
