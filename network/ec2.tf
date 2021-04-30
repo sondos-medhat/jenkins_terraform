@@ -14,13 +14,13 @@ resource "aws_instance" "bastion" {
 
 }
 
-# resource "aws_instance" "application" {
-#      ami = var.awsinstance
-#     instance_type = "t2.micro"
-#     vpc_security_group_ids = [aws_security_group.allowsshand3000.id]
-#     subnet_id = aws_subnet.private1.id
-#     key_name = aws_key_pair.sshpublickey2.key_name
-#     tags = {
-#         Name = "Application EC2"
-#     }
-# }
+resource "aws_instance" "application" {
+     ami = var.awsinstance
+    instance_type = "t2.micro"
+    vpc_security_group_ids = [aws_security_group.allowsshand3000.id]
+    subnet_id = aws_subnet.private1.id
+    key_name = aws_key_pair.sshpublickey2.key_name
+    tags = {
+        Name = "Application EC2"
+    }
+}
